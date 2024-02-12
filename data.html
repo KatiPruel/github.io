@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        #upper-part {
+            margin: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 50px;
+            align-items: top;
+        }
+
+        #student-info-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .student-info {
+            margin-top: 5px;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: right;
+            color: rgb(55, 61, 63);
+
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        #charts-wrapper {
+            margin: 50px 100px;
+        }
+
+        #progress {
+            width: 100%;
+        }
+
+        #skills {
+            width: 100%;
+        }
+
+        .btn {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            color: rgb(55, 61, 63);
+            text-align: center;
+            border: none;
+            background-color: rgba(169, 210, 209, 0.85);
+            border-radius: 15px;
+            height: 30px;
+            width: 100%;
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn:hover {
+            background-color: rgba(131, 190, 190, 0.85);
+        }
+
+        .btn:active {
+            background-color: rgba(48, 146, 145, 0.85);
+        }
+
+        .apexcharts-toolbar {
+            visibility: hidden;
+        }
+    </style>
+    <title>GraphQL</title>
+</head>
+
+<body>
+    <div id="upper-part">
+        <div id="student-info-container">
+            <div class="student-info">
+                <div id="student-name"></div>
+                <div id="student-email"></div>
+                <div id="student-xp-amount"></div>
+                <div id="student-audit-ratio"></div>
+            </div>
+            <div class="student-info">
+                <form id="student-gitea" action="">
+                    <button class="btn">Gitea</button>
+                </form>
+                <button class="btn" id="logout-btn">Log out</button>
+            </div>
+        </div>
+        <div id="skills"></div>
+        <div id="audits"></div>
+    </div>
+
+    <div id="charts-wrapper">
+        <div id="progress"></div>
+    </div>
+
+    <script type="module" src="data.js"></script>
+</body>
+
+</html>
